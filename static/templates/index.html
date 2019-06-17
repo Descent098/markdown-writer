@@ -1,0 +1,55 @@
+{% extends "template.html" %}
+
+{% block page_title %} Home {% endblock page_title %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/fonts/ionicons.min.css">
+<link rel="stylesheet" href="/static/css/styles.css">
+<link rel="stylesheet" href="/static/css/Highlight-Blue.css">
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="card-group" style="background-color: #f0f0f0;">
+        <div class="card" style="background-color: #f0f0f0;"><img class="card-img-top w-50 d-block" src="/static/img/Heroku%20logo%20400%20by%20400.jpg">
+            <div class="card-body" style="background-color: #f0f0f0;">
+                <h4 class="card-title">Heroku</h4>
+                <p class="card-text">Heroku is an online platform to simplify hosting. Click the button below to learn more.</p><a class="btn btn-dark" role="button" style="background-color: #141414;"
+                    href="//heroku.com">Button</a></div>
+        </div>
+        <div class="card" style="background-color: #f0f0f0;"><img class="card-img-top w-50 d-block" src="/static/img/Flask%20icon%20400%20by%20400.jpg">
+            <div class="card-body" style="background-color: #f0f0f0;">
+                <h4 class="card-title">Flask</h4>
+                <p class="card-text">Flask is a python microframework. This demo was made and runs entirely on flask</p><a class="btn btn-dark" role="button" style="background-color: #141414;"
+                    href="//flask.pocoo.org/">Button</a></div>
+        </div>
+        <div class="card" style="background-color: #f0f0f0;"><img class="card-img-top w-50 d-block" src="/static/img/Github%20logo%20400%20by%20400.jpg">
+            <div class="card-body" style="background-color: #f0f0f0;">
+                <h4 class="card-title">Github</h4>
+                <p class="card-text">If you are interested and want to know more, check out the repository with even more information through the button bellow</p><a class="btn btn-dark" role="button" style="background-color: #141414;" href="//github.com/WAQSS/Flask-Heroku">Button</a></div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="bg-info border rounded shadow-sm highlight-blue">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Video Tutorial</h2>
+                <p class="text-center">Comming soon...</p>
+            </div>
+            <center>
+            <div class="buttons" ><a class="btn btn-primary" role="button" href="#">Click me for video walkthrough</a></div>
+            </center>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+{% endblock scripts %}
+
+{% block shameless_plug %}
+{% endblock shameless_plug %}
+

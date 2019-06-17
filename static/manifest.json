@@ -1,0 +1,7 @@
+{"short_name":"Heroku + Flask",
+    "name":"Heroku + Flask",
+    "icons":[{"src":"/static/img/icons/default-icon.png","type":"image/png","sizes":"192x192"}],
+    "start_url":"/",
+    "background_color":"#f0f0f0",
+    "theme_color":"#141414",
+    "display":"standalone"}

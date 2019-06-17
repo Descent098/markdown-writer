@@ -1,0 +1,6 @@
+{
+	"name": "Heroku and Flask Demo app",
+	"description": "The default flask heroku app visit https://github.com/WAQSS/Flask-Heroku for details.",
+	"repository": "https://github.com/WAQSS/Flask-Heroku",
+	"keywords": ["flask", "python", "static"]
+}

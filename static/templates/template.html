@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Manifest and Metadata-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{% block page_title %}  {% endblock %}| Flask Heroku</title>
+    <meta name="twitter:description" content="Welcome to the default flask heroku app visit https://github.com/WAQSS/Flask-Heroku for details.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="/static/img/icons/default-icon.png">
+    <meta property="og:type" content="website">
+    <meta name="description" content="Welcome to the default flask heroku app visit https://github.com/WAQSS/Flask-Heroku for details.">
+    <meta property="og:image" content="/static/img/icons/default-icon.png">
+    <meta name="twitter:title" content="Flask Heroku Demo">
+    <meta name="theme-color" content="#141414">
+    <link rel="manifest" href="/static/manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/img/icons/default-icon.png">
+    
+    <!-- Stylesheets -->
+    {% block stylesheets %}
+    {% endblock %}
+    
+</head>
+
+<body style="background-color: #f0f0f0;">
+    
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-dark navbar-expand-md text-white navigation-clean" style="background-color: #141414;">
+            <div class="container"><a class="navbar-brand" href="/" style="color: #f0f0f0;">Project Name</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item" role="presentation"></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="//github.com/WAQSS/Flask-Heroku/blob/master/README.md" target="_blank">Read Me</a></li>
+                        <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Media links</a>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="//heroku.com">Heroku Homepage</a><a class="dropdown-item" role="presentation" href="//flask.pocoo.org/docs/1.0/" target="_blank">Flask Documentation</a><a class="dropdown-item"
+                                    role="presentation" href="//github.com/WAQSS/Flask-Heroku" target="_blank">Link to Repository</a></div>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Page Content -->
+
+    {% block content %}
+    {% endblock %}
+
+    
+    
+    <!-- Footer -->
+    <div class="text-white-50 d-xl-flex justify-content-xl-center footer-basic" style="background-color: #141414;">
+        <footer class="text-center">
+            <div class="text-center justify-content-xl-center align-items-xl-center social"><a href="https://github.com/WAQSS/Flask-Heroku" target="_blank"><i class="icon ion-social-github"></i></a><a href="//www.youtube.com/descent098" target="_blank"><i class="icon ion-social-youtube"></i></a><a href="//linkedin.com/in/kieran-wood/"
+                    target="_blank"><i class="icon ion-social-linkedin"></i></a></div>
+            <ul class="list-inline d-xl-inline-flex justify-content-xl-center align-items-xl-center">
+                <li class="list-inline-item d-xl-flex"><a href="/">Home</a></li>
+            </ul><a class="text-white-50 justify-content-xl-center" href="https://github.com/WAQSS/Flask-Heroku"><br><br>Powered by WAQSS<br></a></footer>
+    </div>
+    
+    {% block scripts %}
+    <!-- Javascript -->
+    
+
+    {% endblock %}
+    
+</body>
+
+
+{% block shameless_plug %}
+<!--
+   _____              .___        __      __.__  __  .__     
+  /     \ _____     __| _/____   /  \    /  \__|/  |_|  |__  
+ /  \ /  \\__  \   / __ |/ __ \  \   \/\/   /  \   __\  |  \ 
+/    Y    \/ __ \_/ /_/ \  ___/   \        /|  ||  | |   Y  \
+\____|__  (____  /\____ |\___  >   \__/\  / |__||__| |___|  /
+        \/     \/      \/    \/         \/                \/ 
+ __      __  _____   ________    _________ _________         
+/  \    /  \/  _  \  \_____  \  /   _____//   _____/         
+\   \/\/   /  /_\  \  /  / \  \ \_____  \ \_____  \          
+ \        /    |    \/   \_/.  \/        \/        \         
+  \__/\  /\____|__  /\_____\ \_/_______  /_______  /         
+       \/         \/        \__>       \/        \/  
+
+    https://github.com/WAQSS/Flask-Heroku -->
+{% endblock %}
+
+</html>
