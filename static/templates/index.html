@@ -7,11 +7,16 @@
 <link rel="stylesheet" href="/static/fonts/ionicons.min.css">
 <link rel="stylesheet" href="/static/css/styles.css">
 <link rel="stylesheet" href="/static/css/quill.snow.css">
+<link rel="stylesheet" href="/static/css/quill.bubble.css">
+<link href="/static/css/vs2015.css" rel="stylesheet">
+
+
+
 {% endblock stylesheets %}
 
 {% block content %}
 <center>
-<div id="editor" style="text-align: center;">
+<div id="editor" style="text-align: center; min-height: 800px;">
   <p>Hello World!</p>
   <p>Some initial <strong>bold</strong> text</p>
   <p><br></p>
@@ -20,18 +25,36 @@
 
 {% endblock content %}
 
+</br>
+</br>
+
 {% block scripts %}
 <script src="/static/js/quill/quill.js"></script>
 <script src="/static/js/jquery.min.js"></script>
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script href="/static/js/highlight.js"></script>
 
 <script>
-  var quill = new Quill('#editor', {
-    theme: 'snow'
-  });
+var toolbarOptions = [
+  [{ 'font': [] }],
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+  ['bold', 'italic', 'underline', 'strike'],      
+  ['code-block'],
+  ['blockquote', { 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],      
+  [{ 'background': [] }],          
+  ['clean']                                         // remove formatting button
+];
+var chosen_theme = (window.screen.width > 736) ? "snow": "bubble";
+var quill = new Quill('#editor', {
+  modules: {
+    syntax: true,              // Include syntax module
+    toolbar: toolbarOptions  // Include button in toolbar
+  },
+  theme: chosen_theme
+});
 </script>
 {% endblock scripts %}
 
 {% block shameless_plug %}
 {% endblock shameless_plug %}
-
