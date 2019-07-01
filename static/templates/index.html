@@ -1,6 +1,6 @@
 {% extends "template.html" %}
 
-{% block page_title %} Home {% endblock page_title %}
+{% block page_title %} Primary Writing page {% endblock page_title %}
 
 {% block stylesheets %}
 <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
@@ -15,11 +15,10 @@
 {% endblock stylesheets %}
 
 {% block content %}
+<!--Div that will have quill injected into it-->
 <center>
 <div id="editor" style="text-align: center; min-height: 800px;">
-  <p>Hello World!</p>
-  <p>Some initial <strong>bold</strong> text</p>
-  <p><br></p>
+  
 </div>
 </center>
 
@@ -34,7 +33,9 @@
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 <script href="/static/js/highlight.js"></script>
 
+<!--Setting up quill editor-->
 <script>
+// Set up editing options available
 var toolbarOptions = [
   [{ 'font': [] }],
   [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
@@ -45,7 +46,10 @@ var toolbarOptions = [
   [{ 'background': [] }],          
   ['clean']                                         // remove formatting button
 ];
-var chosen_theme = (window.screen.width > 736) ? "snow": "bubble";
+
+var chosen_theme = (window.screen.width > 736) ? "snow": "bubble"; // Set theme based on screen resolution
+
+// Convert editor div to quill object
 var quill = new Quill('#editor', {
   modules: {
     syntax: true,              // Include syntax module
