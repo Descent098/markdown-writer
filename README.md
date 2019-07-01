@@ -1,9 +1,13 @@
-# Flask-Heroku
-A quick and dirty Flask app that is designed to be deployed to Heroku. This repository is a template repository and is designed to be a launching off point for people looking to write flask apps that work with heroku.
+# Markdown Writer
+A simple article writing flask app/microservice. Meant to be accessible on a desktop or mobile device that allows you to
 
-If you have never used a template repository before check out the information on how to [here](https://help.github.com/en/articles/creating-a-repository-from-a-template)
+Authored using [Flask-Heroku](https://github.com/WAQSS/Flask-Heroku)
 
-The base demo does have a developed structure with template variables and some of the standard metadata added, but feel free to get rid of all of this if it dosent work for you.
+# Features/goals
+- Mobile friendly; You shouldn't have to wait til you get home to write something.
+- Simple to use & modify; Extensibility is essential, this is a basic implementation and not indented to have all the 'batteries included' approach of something like a full CMS.
+- API ingestible; Meant to easily be able to output content to an API that can be ingested by another service. Allows a huge amount of content portability and easier implementation. 
+- Database (optional); If you are looking to have a system that outputs markdown or HTML to a database with a few extra fields it should be a one line configuration change to do so.
 
 # Usage
 
@@ -14,14 +18,14 @@ The base demo does have a developed structure with template variables and some o
 
 ### Setup
 1. Install dependencies: This can be done running the following command from the root folder:
-   ```shell
+   ```
    pip3 install -r requirements.txt 
    ```
-2. Running: Run the default app using the following command from the root folder 
-   ```shell
+2. Running: Run the app using the following command from the root folder 
+   ```
    python3 routes.py
    ```
-3. Begin developing your app, the simplest way is to just build a static HTML app inside the static folder.
+3. Begin developing.
 
 ## Deployment to Heroku
 ### Single click deploy
@@ -71,6 +75,8 @@ App.json; Provides some metadata to Heroku, and allows for the single click depl
 
 runtime.txt; Allows you to specify a python version that heroku will run your app with.
 
+## Additional info
+The app is using [Quill](https://quilljs.com/) as the primay WSYWIG with [higlight.js](https://highlightjs.org/) for the code embedding module. Take a look at both respectively for info on how to configure the editor as you like.
 
 # Single click deploy
 Once you have created your own app you can just click here to deploy from your repo
