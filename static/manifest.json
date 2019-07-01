@@ -1,5 +1,5 @@
-{"short_name":"Heroku + Flask",
-    "name":"Heroku + Flask",
+{"short_name":"Markdown Writer",
+    "name":"Markdown Writer; A simple to use flask article authoring system",
     "icons":[{"src":"/static/img/icons/default-icon.png","type":"image/png","sizes":"192x192"}],
     "start_url":"/",
     "background_color":"#f0f0f0",

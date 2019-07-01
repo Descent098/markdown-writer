@@ -1,6 +1,6 @@
 {
-	"name": "Heroku and Flask Demo app",
-	"description": "The default flask heroku app visit https://github.com/WAQSS/Flask-Heroku for details.",
-	"repository": "https://github.com/WAQSS/Flask-Heroku",
+	"name": "Markdown Writer",
+	"description": "An article authoring system. Designed to output in markdown or HTML",
+	"repository": "https://github.com/Descent098/markdown-writer",
 	"keywords": ["flask", "python", "static"]
 }
