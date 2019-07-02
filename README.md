@@ -1,5 +1,5 @@
 # Markdown Writer
-A simple article writing flask app/microservice. Meant to be accessible on a desktop or mobile device that allows you to
+A simple article writing flask app/microservice. Meant to be accessible on a desktop or mobile device, and allow for easy grab-n-dev building of full apps.
 
 Authored using [Flask-Heroku](https://github.com/WAQSS/Flask-Heroku)
 
