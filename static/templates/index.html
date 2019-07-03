@@ -1,6 +1,6 @@
 {% extends "template.html" %}
 
-{% block page_title %} Primary Writing page {% endblock page_title %}
+{% block page_title %} Create Article {% endblock page_title %}
 
 {% block stylesheets %}
 <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
@@ -15,17 +15,60 @@
 {% endblock stylesheets %}
 
 {% block content %}
-<!--Div that will have quill injected into it-->
+
+
+<form class="form-horizontal">
+<fieldset>
 <center>
-<div id="editor" style="text-align: center; min-height: 800px;">
-  
-</div>
+<!-- Form Name -->
+<legend>Create Article</legend>
 </center>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Heading">Heading</label>  
+  <div class="col-md-8">
+  <input id="Heading" name="Heading" type="text" placeholder="Heading text Here" class="form-control input-md" required="">
+  <span class="help-block">Enter Heading text here</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="sub-heading">Sub-Heading</label>  
+  <div class="col-md-8">
+  <input id="sub-heading" name="sub-heading" type="text" placeholder="Sub Heading Text here" class="form-control input-md" required="">
+  <span class="help-block">Enter Sub Heading Text above</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="category">Categorie(s)</label>  
+  <div class="col-md-8">
+  <input id="category" name="category" type="text" placeholder="Enter Category(s) Here" class="form-control input-md" required="">
+  <span class="help-block">Enter Category(s) above</span>  
+  </div>
+</div>
+
+
+<!--Div that will have quill injected into it-->
+<div id="editor" style="text-align: center; min-height: 800px;">
+</div>
+
+</br>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-8">
+    <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+</fieldset>
+
+</form>
 
 {% endblock content %}
-
-</br>
-</br>
 
 {% block scripts %}
 <script src="/static/js/quill/quill.js"></script>
