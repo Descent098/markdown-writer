@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/static/css/styles.css">
 <link rel="stylesheet" href="/static/css/quill.snow.css">
 <link rel="stylesheet" href="/static/css/quill.bubble.css">
-<link href="/static/css/vs2015.css" rel="stylesheet">
+
 
 
 
@@ -17,7 +17,7 @@
 {% block content %}
 
 
-<form class="form-horizontal">
+<form class="form-horizontal" method="post">
 <fieldset>
 <center>
 <!-- Form Name -->
@@ -55,6 +55,8 @@
 <div id="editor" style="text-align: center; min-height: 800px;">
 </div>
 
+<input type="hidden" id="content" name="content">
+
 </br>
 <!-- Button -->
 <div class="form-group">
@@ -73,8 +75,6 @@
 {% block scripts %}
 <script src="/static/js/quill/quill.js"></script>
 <script src="/static/js/jquery.min.js"></script>
-<script src="/static/bootstrap/js/bootstrap.min.js"></script>
-<script href="/static/js/highlight.js"></script>
 
 <!--Setting up quill editor-->
 <script>
@@ -82,8 +82,7 @@
 var toolbarOptions = [
   [{ 'font': [] }],
   [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-  ['bold', 'italic', 'underline', 'strike'],      
-  ['code-block'],
+  ['bold', 'italic', 'underline', 'strike'],
   ['blockquote', { 'list': 'ordered'}, { 'list': 'bullet' }],
   [{ 'script': 'sub'}, { 'script': 'super' }],      
   [{ 'background': [] }],          
@@ -95,11 +94,21 @@ var chosen_theme = (window.screen.width > 736) ? "snow": "bubble"; // Set theme 
 // Convert editor div to quill object
 var quill = new Quill('#editor', {
   modules: {
-    syntax: true,              // Include syntax module
     toolbar: toolbarOptions  // Include button in toolbar
   },
   theme: chosen_theme
 });
+
+
+var form = document.querySelector('form');
+form.onsubmit = function() {
+  // Populate hidden form on submit
+  var content = document.querySelector('input[name=content]');
+  // content.value = JSON.stringify(quill.getContents());
+  content.value = quill.container.firstChild.innerHTML
+  
+  console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+};
 </script>
 {% endblock scripts %}
 
